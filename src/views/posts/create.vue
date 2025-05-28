@@ -44,6 +44,10 @@
             errors.value = error.response.data;
         });
     };
+    // back button
+    const goBack = () => {
+        router.push({ path: "/posts" });
+    };
 </script>
 
 <template>
@@ -74,6 +78,9 @@
                                     <span>{{ errors.content[0] }}</span>
                                 </div>
                             </div>
+                            <button @click="goBack" class="btn btn-md btn-secondary rounded-sm shadow border-0 me-2">
+                                &laquo; Back
+                            </button>
                             <button type="submit" class="btn btn-md btn-primary rounded-sm shadow border-0">Save</button>
                         </form>
                     </div>
